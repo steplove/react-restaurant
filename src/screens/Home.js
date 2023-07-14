@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import NavBar from "../components/navBar";
 import logo from "../images/soda.jpg";
-import TableProduct from "../components/TableProduct";
+import Foot from "../components/foot";
+import { FaMoneyBill1Wave, FaWarehouse, FaShop, FaGear,FaPrint,FaHouseChimney } from "react-icons/fa6";
 function Home() {
   //===================== Check Token ========================//
   useEffect(() => {
@@ -80,6 +82,12 @@ function Home() {
                 </div>
                 <div className="logo-element">IN+</div>
               </li>
+              <li className="active">
+                <a href="/">
+                  <FaHouseChimney/>{" "}
+                  <span className="nav-label">หน้าแรก</span>
+                </a>
+              </li>
               <li>
                 <a href="/">
                   <i className="fa fa-list"></i>{" "}
@@ -87,7 +95,7 @@ function Home() {
                   <span className="fa arrow"></span>
                 </a>
                 <ul className="nav nav-second-level">
-                  <li className="active">
+                  <li>
                     <a href="manageproduct">จัดการสินค้า</a>
                   </li>
                   <li>
@@ -121,6 +129,9 @@ function Home() {
           </div>
           <div class="wrapper wrapper-content animated fadeInRight">
             <div class="card">
+              <div class="card-title ml-4">
+                <h1>สรุปยอดรายวัน</h1>
+              </div>
               <div class="card-body">
                 <div class="row">
                   <div class="col-lg-4">
@@ -178,9 +189,138 @@ function Home() {
                 </div>
               </div>
             </div>
-          </div>{" "}
+            <br />
+            <div class="card">
+              <div class="card-title ml-4">
+                <h1>เมนู</h1>
+              </div>
+              <div class="card-body ml-4">
+                <div className="container">
+                  <div class="row">
+                    <div className="col-lg-3 col-sm-6 text-center">
+                      <Link to="/productsample">
+                        <button
+                          className="btn btn-info dim btn-large-dim btn-outline"
+                          type="button"
+                        >
+                          <FaShop />
+                        </button>
+                        <h4>ตัวอย่างหน้าร้าน</h4>
+                      </Link>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 text-center">
+                      <button
+                        class="btn btn-warning  dim btn-large-dim btn-outline"
+                        type="button"
+                      >
+                        <FaMoneyBill1Wave />
+                      </button>
+                      <h4>สรุปยอด</h4>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 text-center">
+                      <button
+                        class="btn btn-primary  dim btn-large-dim btn-outline"
+                        type="button"
+                      >
+                        <FaWarehouse />
+                      </button>
+                      <h4>คลัง</h4>
+                    </div>{" "}
+                    <div class="col-lg-3 col-sm-6 text-center">
+                      <button
+                        class="btn btn-warning dim btn-large-dim btn-outline"
+                        type="button"
+                      >
+                        <FaGear />
+                      </button>
+                      <h4>ตั้งค่า</h4>
+                    </div>{" "}
+                    <div class="col-lg-3 col-sm-6 text-center">
+                      <button
+                        class="btn btn-warning dim btn-large-dim btn-outline"
+                        type="button"
+                        
+                      >
+                        <FaPrint />
+
+                      </button>
+                      <h4>พิมพ์ใบเสร็จ</h4>
+                    </div>{" "}
+                    <div class="col-lg-3 col-sm-6 text-center">
+                      <button
+                        class="btn btn-warning dim btn-large-dim btn-outline"
+                        type="button"
+                        disabled
+                      ></button>
+                      <h4>???</h4>
+                    </div>{" "}
+                    <div class="col-lg-3 col-sm-6 text-center">
+                      <button
+                        class="btn btn-warning dim btn-large-dim btn-outline"
+                        type="button"
+                        disabled
+                      ></button>
+                      <h4>???</h4>
+                    </div>{" "}
+                    <div class="col-lg-3 col-sm-6 text-center">
+                      <button
+                        class="btn btn-warning dim btn-large-dim btn-outline"
+                        type="button"
+                        disabled
+                      ></button>
+                      <h4>???</h4>
+                    </div>{" "}
+                    <div class="col-lg-3 col-sm-6 text-center">
+                      <button
+                        class="btn btn-warning dim btn-large-dim btn-outline"
+                        type="button"
+                        disabled
+                      ></button>
+                      <h4>???</h4>
+                    </div>{" "}
+                    <div class="col-lg-3 col-sm-6 text-center">
+                      <button
+                        class="btn btn-warning dim btn-large-dim btn-outline"
+                        type="button"
+                        disabled
+                      ></button>
+                      <h4>???</h4>
+                    </div>{" "}
+                    <div class="col-lg-3 col-sm-6 text-center">
+                      <button
+                        class="btn btn-warning dim btn-large-dim btn-outline"
+                        type="button"
+                        disabled
+                      ></button>
+                      <h4>???</h4>
+                    </div>{" "}
+                    <div class="col-lg-3 col-sm-6 text-center">
+                      <button
+                        class="btn btn-warning dim btn-large-dim btn-outline"
+                        type="button"
+                        disabled
+                      ></button>
+                      <h4>???</h4>
+                    </div>{" "}
+                    <div class="col-lg-3 col-sm-6 text-center">
+                      <button
+                        class="btn btn-warning dim btn-large-dim btn-outline"
+                        type="button"
+                        disabled
+                      ></button>
+                      <h4>???</h4>
+                    </div>{" "}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br/>
+            <Foot/>
+          </div>
         </div>
+       
       </div>
+    
     </>
   );
 }

@@ -125,7 +125,7 @@ const AddProduct = () => {
                     Producttypes.map((Producttype) => (
                       <option
                         key={Producttype.idType}
-                        value={Producttype.idType}
+                        value={Producttype.Ptype}
                       >
                         {Producttype.Ptype}
                       </option>
