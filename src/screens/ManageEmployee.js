@@ -4,30 +4,30 @@ import logo from "../images/soda.jpg";
 import TableProduct from "../components/TableEmployee";
 function ManageEmployee() {
   //===================== Check Token ========================//
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    fetch("http://localhost:3000/authen", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: "Bearer " + token,
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.status === "ok") {
-          console.log(data.status);
-        } else {
-          console.log(data.status);
-          alert("Token หมดอายุ");
-          localStorage.removeItem("token");
-          window.location = "/login";
-        }
-      })
-      .catch((error) => {
-        console.log("Error", error);
-      });
-  }, []);
+  // useEffect(() => {
+  //   const token = localStorage.getItem("token");
+  //   fetch("http://localhost:3000/authen", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Authorization: "Bearer " + token,
+  //     },
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       if (data.status === "ok") {
+  //         console.log(data.status);
+  //       } else {
+  //         console.log(data.status);
+  //         alert("Token หมดอายุ");
+  //         localStorage.removeItem("token");
+  //         window.location = "/login";
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       console.log("Error", error);
+  //     });
+  // }, []);
   return (
     <>
       <div id="wrapper">

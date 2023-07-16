@@ -155,7 +155,6 @@ function TableProduct() {
 
   //========================================= search ==========================================//
   const [searchText, setSearchText] = useState(""); // เพิ่ม state สำหรับเก็บค่าการค้นหา
-  console.log(searchText.filepath, "5555555555asda");
   const handleSearch = () => {
     fetch(
       "http://localhost:3000/searchProduct?keyword=" +

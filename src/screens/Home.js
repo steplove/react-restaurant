@@ -197,7 +197,7 @@ function Home() {
               <div class="card-body ml-4">
                 <div className="container">
                   <div class="row">
-                    <div className="col-lg-3 col-sm-6 text-center">
+                    <div className="col-lg-3  col-md-6 col-5 text-center">
                       <Link to="/productsample">
                         <button
                           className="btn btn-info dim btn-large-dim btn-outline"
